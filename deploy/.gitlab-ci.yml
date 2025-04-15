@@ -1,0 +1,15 @@
+variables:
+  SERVICE_NAME: ai45-website-fe
+  PROJECT: cloud
+  IMAGE_PULL_SECRET: regcred-vpc
+  DOCKERFILE: ./deploy/Dockerfile
+  DEPLOY_DIR: ./deploy
+  DEV_SGPU_VALUE_FILE: values/dev.yml
+
+  PROD_NAMESPACE: cloud # cloud-prod/cloud
+
+  RUNNER_TAG: ecs # 或者aliyun
+
+include:
+  - project: devops/ci-templates
+    file: /templates/aliyun-xlab.yml

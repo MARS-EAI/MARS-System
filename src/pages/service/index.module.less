@@ -1,0 +1,105 @@
+.techModule {
+    padding: 40px 0 80px 0;
+}
+
+.service {
+    .tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+
+        &-item {
+            color: #93969D;
+            font-size: 14px;
+            line-height: 24px;
+            padding: 0 10px;
+            border-radius: 20px;
+            border: 1px solid var(----line-3, #D7D8DD);
+            background: var(--40-text-dark-3, rgba(255, 255, 255, 0.40));
+            background: var(--40-text-dark-3, rgba(255, 255, 255, 0.40));
+            margin-right: 16px;
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                border: 1px solid var(----line-4, #93969D);
+                color: var(--100-text-5, #93969D);
+            }
+        }
+    }
+
+    .cardList {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .inner {
+        border-radius: 8px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: #fff;
+        padding: 24px 120px;
+
+        &-divider {
+            width: 1px;
+            height: 280px;
+            margin: 20px 64px;
+            background: var(----line-3);
+        }
+
+        &-left {}
+
+        &-right {
+            .title {
+                color: var(--100-text-5, #121316);
+                font-feature-settings: 'liga' off, 'clig' off;
+
+                /* 一级组件标题/加粗title-1-semibold */
+                font-family: "PingFang SC";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 36px;
+                margin-bottom: 32px;
+            }
+
+            .desc {
+                color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+                font-feature-settings: 'liga' off, 'clig' off;
+
+                /* 二级组件标题/常规title-2-regular */
+                font-family: "PingFang SC";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px;
+                margin-bottom: 32px;
+            }
+        }
+
+        .github {
+            border-radius: 40px;
+            border: 1px solid var(----line-3);
+            color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+            font-size: 14px;
+            padding: 4px 12px;
+            width: 64px;
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 2px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,355 @@
+.homePage {
+  .inner {
+    border-radius: 8px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+
+    &-divider {
+      width: 1px;
+      height: 280px;
+      margin: 36px 80px 36px 70px;
+      background: var(----line-3);
+    }
+
+    .title {
+      color: var(--100-text-5, #121316);
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+      margin-bottom: 16px;
+      white-space: nowrap;
+    }
+
+    .content {
+      color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      p {
+        margin: 12px 0;
+
+        &.mb16 {
+          margin-bottom: 16px;
+        }
+      }
+
+      .red,
+      .yellow {
+        line-height: 19px;
+        font-size: 14px;
+        position: relative;
+        padding-left: 32px;
+
+        &::before {
+          content: '';
+          width: 16px;
+          height: 2px;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-1px);
+        }
+      }
+
+      .red {
+        margin-bottom: 8px;
+
+        &::before {
+          background-color: #FF0000;
+        }
+      }
+
+      .yellow {
+        &::before {
+          background-color: #FFC000;
+        }
+      }
+    }
+
+    &-left {
+      &.text {
+        width: 380px;
+      }
+
+      &.en-US {
+        img {
+          width: 380px;
+          transform: scale(1.18);
+        }
+      }
+
+      img {
+        width: 380px;
+      }
+    }
+
+    &-right {
+      img {
+        width: 650px;
+      }
+    }
+
+    &.en-US {
+      &.bgWhite1 {
+        background-color: #fff;
+        padding: 48px 60px 48px 70px;
+
+        .inner-right {
+          .title {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      &.bgWhite2 {
+        background-color: #fff;
+        padding: 32px 60px;
+
+        .inner-divider {
+          width: 1px;
+          height: 280px;
+          margin: 36px 10px 36px 40px;
+          background: var(----line-3);
+        }
+      }
+    }
+
+    &.bgWhite1 {
+      background-color: #fff;
+      padding: 24px 60px;
+    }
+
+    &.bgWhite2 {
+      background-color: #fff;
+      padding: 24px 60px;
+
+      .inner-divider {
+        width: 1px;
+        height: 280px;
+        margin: 36px 10px 36px 40px;
+        background: var(----line-3);
+      }
+    }
+
+    &.column {
+      flex-direction: column;
+    }
+
+    &.open {
+      padding: 48px 80px;
+    }
+  }
+
+  .diliverHorizontal {
+    width: 100%;
+    height: 1px;
+    background: var(----line-3);
+    margin: 32px 0;
+  }
+
+  .line {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+
+    .topic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      padding: 16px 19px;
+      margin-right: 160px;
+      color: #121316;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      flex-shrink: 0;
+      white-space: nowrap;
+
+      &.en {
+        margin-right: 46px;
+      }
+    }
+
+    .data {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 8px;
+
+      &-Item {
+        margin-right: 120px;
+        padding: 12px 18px;
+
+        .num {
+          text-align: center;
+          font-feature-settings: 'liga' off, 'clig' off;
+          font-family: AILAB;
+          font-size: 56px;
+          font-style: normal;
+          line-height: 56px;
+          margin: 0;
+          margin-bottom: 8px;
+        }
+
+        .text {
+          color: var(--100-text-5, #121316);
+          text-align: center;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
+          margin: 0;
+        }
+      }
+    }
+
+    .desc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-Item {
+        text-align: center;
+        font-size: 28px;
+        font-style: normal;
+        line-height: 36px;
+        padding: 12px 18px;
+
+        &.en {
+          padding: 0;
+        }
+
+        .text {
+          margin: 0;
+          font-weight: bold;
+        }
+
+      }
+
+      &-plus {
+        margin: 0 40px;
+        text-align: center;
+        font-feature-settings: 'liga' off, 'clig' off;
+
+        /* 一级组件标题/加粗title-1-semibold */
+        font-family: "PingFang SC";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 36px;
+
+        &.en {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+
+  .sliderItem {
+    width: 100%;
+    height: 280px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .con {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 880px;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+
+      .title {
+        text-shadow: 0px 4px 4px rgba(5, 21, 54, 0.25);
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 44px;
+        margin-bottom: 16px;
+      }
+
+      .desc {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+
+      .learnMore {
+        color: var(--75-text-dark-4);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+          padding-right: 4px;
+          transition: all 0.2s linear;
+        }
+
+        &:hover {
+          span {
+            padding-right: 10px;
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+.gradientText {
+  background: linear-gradient(164deg, #9AA6BC -5.09%, #051C46 219.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.en {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+:global {
+  .ant-carousel {
+    .slick-dots {
+      li {
+        button {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.4);
+          opacity: 1;
+        }
+
+        &.slick-active {
+          margin-right: 16px;
+
+          button {
+            width: 32px;
+            height: 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.4);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.techModule {
+    padding: 40px 0 80px 0;
+}
+
+.tech {
+    .cardList {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .inner {
+        border-radius: 8px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: #fff;
+        padding: 24px 120px;
+
+        &-divider {
+            width: 1px;
+            height: 280px;
+            margin: 32px 64px;
+            background: var(----line-3);
+        }
+
+        &-right {
+            .title {
+                color: var(--100-text-5, #121316);
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 30px;
+                margin-bottom: 32px;
+            }
+
+            .desc {
+                color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+                font-size: 20px;
+                line-height: 30px;
+                margin-bottom: 32px;
+            }
+        }
+
+        .github {
+            border-radius: 40px;
+            border: 1px solid var(----line-3);
+            color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+            font-size: 14px;
+            padding: 4px 12px;
+            width: 64px;
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 2px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

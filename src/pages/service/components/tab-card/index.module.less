@@ -1,0 +1,106 @@
+.card {
+    width: 264px;
+    height: 152px;
+    flex-shrink: 0;
+    margin-right: 48px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(----line-2);
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+
+    .hoverBg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 2;
+        transition: all linear 0.2s;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .corner {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 80px;
+        height: 80px;
+        background: url(@/assets/pics/base-card-bg.svg) no-repeat;
+        transition: all linear 0.2s;
+    }
+
+    .title {
+        color: var(--100-text-5, #121316);
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 8px;
+        text-align: left;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .desc {
+        color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+        font-size: 15px;
+        line-height: 24px;
+        height: 48px;
+        overflow: hidden;
+        margin-bottom: 8px;
+        word-break: normal;
+    }
+
+    .types {
+        display: flex;
+        justify-content: flex-start;
+
+        .typeItem {
+            display: flex;
+            padding: 1px 10px;
+            justify-content: center;
+            align-items: center;
+            margin-right: 4px;
+            border-radius: 20px;
+            border: 1px solid var(----line-3);
+            background: var(--40-text-dark-3, rgba(255, 255, 255, 0.40));
+        }
+    }
+
+    &:hover {
+        .hoverBg {
+            opacity: 1;
+        }
+
+        .corner {
+            opacity: 0.5;
+        }
+    }
+}

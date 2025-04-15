@@ -1,0 +1,237 @@
+.modelModule {
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .moduleHeader {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 32px;
+    }
+
+    .moduleTitle {
+        color: var(--100-text-5, #121316);
+        font-size: 24px;
+        line-height: 36px;
+        display: flex;
+        justify-self: flex-start;
+        align-items: center;
+
+        img {
+            margin-right: 12px;
+        }
+    }
+
+    .divider {
+        width: 1px;
+        height: 24px;
+        background: var(----line-3);
+        margin: 0 32px 0 56px;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &-item {
+            color: var(--60-text-3, rgba(18, 19, 22, 0.60));
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-right: 32px;
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+            }
+        }
+    }
+
+    .moduleTabs {
+        padding: 40px 32px;
+
+        :global {
+            .ant-carousel {
+                .slick-arrow {
+
+                    &.slick-next,
+                    &.slick-prev {
+
+                        &::after {
+                            width: 16px;
+                            height: 16px;
+                            top: 8px;
+                            color: #464A53;
+                        }
+                    }
+
+                    &.slick-disabled {
+                        opacity: 0.1;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabSliderItem {
+        padding: 0 108px;
+        display: flex !important;
+        justify-content: flex-start;
+        box-sizing: border-box;
+
+        .left {
+            width: 216px;
+            margin-right: 64px;
+
+            .tabSliderItemTitle {
+                color: var(--100-text-5, #121316);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                margin-bottom: 32px;
+            }
+
+            .tabSliderItemDesc {
+                color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 32px;
+            }
+
+            .tabSliderItemLinks {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    color: var(--60-text-3, rgba(18, 19, 22, 0.60));
+                    font-size: 14px;
+                    line-height: 24px;
+                    padding-bottom: 8px;
+
+                    svg {
+                        padding-left: 4px;
+                        transition: all 0.2s linear;
+                    }
+
+                    &:hover {
+                        color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+
+                        svg {
+                            padding-left: 8px;
+
+                            path {
+                                fill: var(--80-text-4, rgba(18, 19, 22, 0.80));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            padding: 16px;
+            width: 640px;
+            height: 360px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid var(----line-3);
+            background: var(---fill-0);
+
+            :global {
+                .ant-carousel {
+                    .slick-arrow {
+
+                        &.slick-prev {
+                            inset-inline-start: 0;
+                            opacity: 1;
+
+                            &::after {
+                                width: 32px;
+                                height: 32px;
+                                border: 0;
+                                transform: rotate(0deg);
+                                top: -8px;
+                                background: url(../../../assets/prev-arrow.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                        }
+
+                        &.slick-next {
+                            inset-inline-end: 18px;
+                            opacity: 1;
+
+                            &::after {
+                                width: 32px;
+                                height: 32px;
+                                border: 0;
+                                transform: rotate(0deg);
+                                top: -8px;
+                                background: url(../../../assets/next-arrow.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                        }
+
+                        &.slick-disabled {
+                            opacity: 0.1;
+                        }
+                    }
+                }
+            }
+
+            .innerSliderItem {
+                padding: 0 48px;
+                box-sizing: border-box;
+                display: flex !important;
+                justify-content: center;
+                flex-direction: column;
+
+                .pic {
+                    width: 510px;
+                    height: 293px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+
+                    .mask {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 510px;
+                        padding: 16px;
+                        box-sizing: border-box;
+                        background: linear-gradient(180deg, rgba(102, 108, 120, 0.75) 0%, rgba(21, 29, 44, 0.90) 124.37%);
+                        color: var(---fill-0, #FFF);
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 24px;
+                    }
+                }
+
+                img {
+                    max-width: 100%;
+                }
+
+                p {
+                    color: var(--80-text-4, rgba(18, 19, 22, 0.80));
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
