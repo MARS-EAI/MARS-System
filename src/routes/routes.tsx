@@ -6,7 +6,7 @@ import Home from '@/pages/home/home';
 import { ReactElement } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 
-import HomeNew from '@/pages/Homenew/home';
+import HomeNew from '@/pages/homenew/home';
 
 interface RouteItem {
     path: string;
