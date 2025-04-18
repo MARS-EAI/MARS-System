@@ -5,7 +5,7 @@ import { InfoContext } from '@/provider/global-provider';
 import Lang from '../lang/lang';
 import HeaderLogo from '@/assets/header-logo.svg';
 import LogoEn from '@/assets/ai45-logo-en.svg';
-import HeaderLogoNew from '@/assets/output.png';
+import HeaderLogoNew from '@/assets/outputnew.png';
 
 const Header = () => {
     const { pathname } = useLocation();
@@ -17,7 +17,8 @@ const Header = () => {
             <div className={styles.logo}>
                 <NavLink to="/">
                     {/* <img src={lang === 'en-US' ? LogoEn : HeaderLogo} alt="" /> */}
-                    <img src={lang === 'en-US' ? HeaderLogoNew : HeaderLogoNew} alt="" style={{ height: '40px', objectFit: 'contain' }}/>
+                    <img src={lang === 'en-US' ? HeaderLogoNew : HeaderLogoNew} alt="" style={{ height: '40px', objectFit: 'contain' }} />
+                    <span className={styles.brandName}>MARS-EAI</span>
                 </NavLink>
             </div>
             <div className={styles.headerNav}>

@@ -2,6 +2,10 @@ export const EN = {
     'tab.all': 'All',
     'tab.tool': 'Tool',
     'tab.data': 'Data',
+    'tab.control': 'Robot Control',
+    'tab.navigation': 'Robot Navigation',
+    'tab.worldModel': 'World Model',
+    'tab.trustworthy': 'Trustworthy Embodiment',
     'nav.safeBase': 'Safety Foundation',
     'nav.safeTech': 'Safety Technology',
     'nav.safeEval': 'Safety Evaluation',
@@ -226,6 +230,7 @@ export const EN = {
     'service.module2.card4.desc': 'Develop a platform with automated testing, labeling, red team attacks, and report auto-generation.',
     'service.module3.title': 'Vertical Field Evaluations',
     'service.module3.card1.title': 'Healthcare',
+    // eslint-disable-next-line max-len
     'service.module3.card1.desc': 'Model Evaluation on risks in healthcare field, detecting inappropriate responses in medical ethics and general safety issues, such as leaking patient privacy or outputting incorrect knowledge.',
     'service.module3.card2.title': 'Education',
     'service.module3.card2.desc': 'Model Evaluation on risks in education field, detecting inappropriate content such as spreading harmful educational concepts or providing incorrect knowledge.',
@@ -236,6 +241,7 @@ export const EN = {
     'service.module3.card5.title': 'Manufacturing',
     'service.module3.card5.desc': 'Model Evaluation on risks in manufacturing field, detecting issus like leaking business secrets or providing unsafe production suggestions.',
     'service.module3.card6.title': 'Urban Governance',
+    // eslint-disable-next-line max-len
     'service.module3.card6.desc': 'Model Evaluation on risks in urban governance, detecting issues like leaking sensitive city management information or publishing incorrect public policy suggestions.',
 
 
@@ -244,44 +250,131 @@ export const EN = {
     'nav.safeEvalNew': 'Research Projects',
     'nav.safeServiceNew': 'About Us',
 
-    'home.banner.descNew': 'MARS Platform led and developed by Shanghai Artificial Intelligence Laboratory',
+    'home.banner.descNew': 'MARS-EAI: Building Real-World Embodied Society with Agents',
+    'home.block1.titleNew': 'Compositional Intelligence: Exploring Embodied MGI',
+    'home.block1.descNew': 'Compositional Generalization Compositional Constraints, Compositional Agents, Compositional Modeling',
+    'home.block1.inner1.titleNew': 'Compositional Constraints',
+    // eslint-disable-next-line max-len
+    'home.block1.inner1.content.p1New': 'In real-world scenarios, intelligent agents often generate multiple candidate decisions for a given state. This decision space can be modeled as a tree structure, where each node represents a potential action. Some of these actions may be logically invalid, leading to task failure or stagnation, while others may violate spatial or temporal constraints, resulting in suboptimal or unsafe outcomes. Such issues significantly hinder the efficiency and reliability of the decision-making process. By incorporating compositional constraints that integrate logical, temporal, and spatial priors, it becomes possible to eliminate unreasonable choices, thereby greatly enhancing the accuracy, robustness, and safety of agent decisions.',
+    'home.block1.inner1.content.p2New': '实现AI-45°平衡律可能有多种技术路径，我们正在探索一条以因果为核心的方案——可信AGI“因果之梯”，涵盖泛对齐、可干预、能反思三个递进阶段。',
+    'home.block1.inner1.con.redNew': 'AGI 发展“红线”：可能导致不可逆和灾难性后果的 AI 系统行为',
+    'home.block1.inner1.con.yellowNew': 'AGI 发展 “黄线”：早期预警阈值框架，用以在 AI 系统能力接近危险水平时发出信号',
+    'home.block1.inner2.titleNew': 'Compositional Modeling',
+    // eslint-disable-next-line max-len
+    'home.block1.inner2.contentNew': `The modular world model framework emphasizes the collaborative integration 
+        of five core modules - Control, Dynamics, Memory, Intelligence, and Generation - to achieve comprehensive 
+        modeling and prediction of the environment. These modules work in synergy to support the generation of 
+        Interactive Generative Video (IGV), which in turn facilitates high-level task execution (Decision Making). 
+        This compositional modeling approach not only enhances the system's scalability and interpretability 
+        but also provides a solid foundation for generalization and decision-making in complex embodied tasks.`,
+    'home.block2.titleNew': 'Get Start with Mars',
+    // eslint-disable-next-line max-len
+    'home.block2.base.descNew': 'Establish a foundational theoretical framework for embodied multi-agent intelligence, focusing on the modeling and reasoning of compositional constraints, the mechanisms and limits of compositional generalization, and the "big brain–small brain" collaboration paradigm within agent populations. This foundation aims to support the development of coordination algorithms, capability evaluation, and system-level design for multi-agent systems.',
+    // eslint-disable-next-line max-len
+    'home.block2.tech.descNew': 'Develop a comprehensive platform that integrates data-centric infrastructure with multi-agent embodied intelligence simulation. This includes a scalable data factory for efficient collection, annotation, and management, a simulation platform for training and evaluating collaborative embodied agents, and robust Sim2Real pipelines to enable reliable transfer of learned policies to real-world scenarios.',
+    // eslint-disable-next-line max-len
+    'home.block2.eval.descNew': 'Focus on advancing core capabilities in embodied AI, including robotic manipulation for physical interaction, navigation in complex environments, learning-based world models for prediction and planning, and trustworthy embodiment to ensure safety, interpretability, and reliability in real-world deployments.',
+    // eslint-disable-next-line max-len
+    'home.block2.service.descNew': 'Our team is composed of PhDs, professors, and full-time researchers from leading universities and research institutions around the world. We bring together deep academic expertise and practical experience across key areas including robotics, computer vision, and large language models, aiming to advance the frontier of embodied intelligence.',
+    'home.block3.titleNew': 'Open Source',
+    'home.block3.dataNew': 'Automated data production',
+    'home.block3.data.textNew': 'Observe',
+    'home.block3.data.imgNew': 'Trajectory',
+    'home.block3.toolNew': 'Robot Manipulation',
+    'home.slider1.titleNew': 'ICML 2024 MFM-EAI Workshop',
+    // eslint-disable-next-line max-len
+    'home.slider1.descNew': 'This workshop focuses on bridging large-scale multi-modal foundation models with embodied intelligence. We explore how vision-language models and LLMs can empower embodied agents to perceive, reason, and act in complex real-world environments, enabling more generalizable and interactive AI systems. ',
+    'home.slider2.titleNew': 'ICML 2025 MAS Workshop',
+    // eslint-disable-next-line max-len
+    'home.slider2.descNew': 'With the rise of foundation models, multi-agent systems are entering a new era of scalability and generalization. This line of research investigates how large pre-trained models can serve as centralized planners, communication hubs, or policy backbones, enabling agents to reason, collaborate, and adapt in complex embodied tasks. ',
+
+
 
     'base.banner.titleNew': 'Embodied Multi-Agent Technology',
     'base.banner.subTitleNew': ' ',
     'base.banner.descNew': ' ',
     'base.module1.titleNew': 'Combinatorial Constraints',
-    'base.module1.descNew': ' ',
-    'base.module1.card1.titleNew': 'Foundations of Causality for Large Models',
-    'base.module1.card1.descNew': 'Provides the first definition of causal relationships for entities in multimodal large models, laying the theoretical foundation for building safe and trustworthy multimodal large models, embodied intelligent models, and world models with causal reasoning capabilities.',
-    'base.module1.card2.titleNew': 'Causal Interpretability Framework for Large Models',
-    'base.module1.card2.descNew': 'Develops the first causal interpretability framework for multimodal large models, exploring the mechanisms behind hallucination problems and laying the groundwork for future explainability studies of large models.',
-    'base.module1.card3.titleNew': 'Foundations of Self-Awareness for Large Models',
-    'base.module1.card3.descNew': 'Provides the first formal mathematical definition of self-awareness, and explores how to quantify, represent, and manipulate self-awareness in large models, establishing the basis for advanced safety and trustworthiness research in large models.',
+    'base.module1.descNew': '',
+    'base.module1.card1.titleNew': 'Multi-Agent Compositional Constraints',
+    'base.module1.card1.descNew': '',
+    'base.module1.card2.titleNew': 'Failure Detection under Spatio-Temporal Constraints',
+    'base.module1.card2.descNew': '',
+    'base.module1.card3.titleNew': '',
+    'base.module1.card3.descNew': '',
     'base.module2.titleNew': 'Combinatorial Generalization',
-    'base.module2.descNew': ' ',
+    'base.module2.descNew': '',
+    'base.module2.card1.titleNew': 'Compositional Generalization for Open-Ended Embodied Agents',
+    'base.module2.card1.descNew': '',
+    'base.module2.card2.titleNew': 'Compositional Generalization in Robotic Manipulation',
+    'base.module2.card2.descNew': '',
+    'base.module2.card3.titleNew': '',
+    'base.module2.card3.descNew': '',
     'base.module3.titleNew': 'Collective Brain',
-    'base.module3.descNew': ' ',
+    'base.module3.descNew': '',
+    'base.module3.card1.titleNew': 'Collective Big- and Small-Brain Architecture for Automated Data Collection',
+    'base.module3.card1.descNew': '',
+    'base.module3.card2.titleNew': 'Collective Big- and Small-Brain Architecture under Reinforcement Learning',
+    'base.module3.card2.descNew': '',
+    'base.module3.card3.titleNew': '',
+    'base.module3.card3.descNew': '',
 
     'tech.banner.titleNew': 'Data and Development Platform',
     'tech.banner.subTitleNew': ' ',
     'tech.banner.descNew': ' ',
     'tech.module1.titleNew': 'Data Factory',
     'tech.module2.titleNew': 'Embodied Collective Intelligence Simulation Platform',
-    'tech.module3.titleNew': 'Human-Machine Interaction',
+    'tech.module3.titleNew': 'Sim2Real',
     'tech.module4.titleNew': ' ',
 
     'eval.banner.titleNew': 'Research Projects',
-    'eval.banner.subTitleNew': ' ',
-    'eval.banner.descNew': ' ',
+    'eval.titleNew': 'Research Projects',
+    'eval.banner.subTitleNew': '',
+    'eval.banner.descNew': '',
     'eval.module1.titleNew': 'Robot Manipulation',
     'eval.module2.titleNew': 'Robot Navigation',
     'eval.module3.titleNew': 'World Models',
     'eval.module4.titleNew': 'Trustworthy Embodiment',
+    'eval.module1.card.RoboFactory.title': 'RoboFactory',
+    'eval.module1.card.RoboFactory.desc': 'The first embodied multi-agent manipulation simulation platform',
+
+    'eval.module1.card.CAM.title': 'CAM',
+    'eval.module1.card.CAM.desc': 'Failure Detection under Spatio-Temporal Constraints',
+
+    'eval.module1.card.RH20T-P.title': 'RH20T-P',
+    'eval.module1.card.RH20T-P.desc': 'A Primitive-Level Robotic Dataset Towards Composable Generalization Agents',
+
+    'eval.module1.card.UGP.title': 'UGP',
+    'eval.module1.card.UGP.desc': 'Unified Gaussian Multi-Agent Imitation Learning',
+
+    'eval.module1.card.CDP.title': 'CDP',
+    'eval.module1.card.CDP.desc': 'Causal Autoregressive Diffusion Policy Model',
+
+    'eval.module1.card.ReSo.title': 'ReSo',
+    'eval.module1.card.ReSo.desc': 'Embodied Planner Based on Multi-Agent Systems',
+
+    'eval.module1.card.NavigateDiff.title': 'NavigateDiff',
+    'eval.module1.card.NavigateDiff.desc': 'An Embodied Navigation Framework Based on Foundation Models',
+
+    'eval.module1.card.MP5.title': 'MP5',
+    'eval.module1.card.MP5.desc': 'Embodied Multi-Agent Systems in Open-Ended Environments',
+
+    'eval.module1.card.WorldSimBench.title': 'WorldSimBench',
+    'eval.module1.card.WorldSimBench.desc': 'The First Evaluation Framework for Embodied World Models',
+
+    'eval.module1.card.MineDreamer.title': 'MineDreamer',
+    'eval.module1.card.MineDreamer.desc': 'Embodied World Models in Open-Ended Environments',
+
+    'eval.module1.card.GameFactory.title': 'GameFactory',
+    'eval.module1.card.GameFactory.desc': 'The First Streaming Embodied World Model for Scene Generalization',
+
+    'eval.module1.card.SafeDiff.title': 'SafeDiff',
+    'eval.module1.card.SafeDiff.desc': 'A Safe Robotic Manipulation Diffusion Policy Model with Visuo-Tactile Fusion',
 
     'service.banner.titleNew': 'About Us',
-    'service.banner.subTitleNew': 'We are building a real-world embodied society with our partners',
-    'service.banner.descNew': ' ',
+    'service.banner.subTitleNew': 'We are Building Real-World Embodied Society with Agents',
+    'service.banner.descNew': '',
     'service.module3.titleNew': 'News',
+    'service.module3.New1': 'Dr. Zaibin Zhang, a core member of MARS, shared his vision of future robots during an interview with a CCTV reporter.',
     'service.module3.card1.titleNew': 'News 1',
     'service.module3.card1.descNew': 'News content news content news content news content news content news content news content news content news content news content news content news content news content news content news content.',
     'service.module3.card2.titleNew': 'News 2',
@@ -294,6 +387,6 @@ export const EN = {
     'service.module3.card5.descNew': 'News content news content news content news content news content news content news content news content news content news content news content news content news content news content news content.',
     'service.module3.card6.titleNew': 'News 6',
     'service.module3.card6.descNew': 'News content news content news content news content news content news content news content news content news content news content news content news content news content news content news content.',
-
+    'service.module3.titleSchool': 'Our Academic Partners',
 
 };

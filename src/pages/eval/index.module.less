@@ -13,4 +13,37 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+
+        &-item {
+            color: #93969D;
+            font-size: 14px;
+            line-height: 24px;
+            padding: 0 10px;
+            border-radius: 20px;
+            border: 1px solid var(----line-3, #D7D8DD);
+            background: var(--40-text-dark-3, rgba(255, 255, 255, 0.40));
+            background: var(--40-text-dark-3, rgba(255, 255, 255, 0.40));
+            margin-right: 16px;
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                border: 1px solid var(----line-4, #93969D);
+                color: var(--100-text-5, #93969D);
+            }
+        }
+    }
+
+    .cardList {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }

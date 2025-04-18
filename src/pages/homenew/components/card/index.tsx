@@ -1,7 +1,10 @@
 import styles from './index.module.less';
 import { useNavigate } from 'react-router';
+import { useContext } from 'react';
+import { InfoContext } from '@/provider/global-provider';
 
 const Card = ({ imgUrl, title, desc, path }: any) => {
+    const { lang } = useContext(InfoContext);
     const navigate = useNavigate();
 
     const lineToPage = () => {
@@ -9,7 +12,7 @@ const Card = ({ imgUrl, title, desc, path }: any) => {
     };
 
     return (
-        <div className={styles.card} onClick={lineToPage}>
+        <div className={`${styles.card} ${lang === 'en-US' ? styles.enCard : ''}`} onClick={lineToPage}>
             <div className={styles.pic}>
                 <img src={imgUrl} alt="" />
             </div>

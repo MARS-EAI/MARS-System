@@ -1,58 +1,123 @@
 import styles from './index.module.less';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import Banner from '@/components/banner';
 import Panel from '@/components/panel';
 import CommonCard from '@/components/card';
-import SliderModule from './slider-module';
+import TabCard from './components/tab-card';
 import { InfoContext } from '@/provider/global-provider';
 import EvalBannerPic from '@/assets/pics/eval-banner.jpg';
-import EvalAsset1 from '@/assets/pics/eval-asset-1.jpg';
-import EvalAsset1En from '@/assets/pics/eval-asset-1-en.png';
-import EvalAsset2 from '@/assets/pics/eval-asset-2.jpg';
-import EvalAsset3 from '@/assets/pics/eval-asset-3.jpg';
-import EvalAsset4 from '@/assets/pics/eval-asset-4.jpg';
-import EvalCardHoverBg1 from '@/assets/pics/eval-card-hover-bg-1.jpg';
-import EvalCardHoverBg2 from '@/assets/pics/eval-card-hover-bg-2.jpg';
-import EvalSmallCard from './eval-small-card';
+import classNames from 'classnames';
+import ServiceM1HoverBg from '@/assets/pics/service-m1-card-hover.jpg';
+
+
+export const typeMap: any = {
+    all: 'tab.all',
+    control: 'tab.control',// 机器人操控
+    navigation: 'tab.navigation', // 机器人导航
+    worldModel: 'tab.worldModel', // 世界模型
+    trustworthy: 'tab.trustworthy', // 可信具身
+};
 
 const Eval = () => {
     const { lang, locale } = useContext(InfoContext);
 
-    const module3CardList = [
+    const module1CardList = [
+        // 机器人操控
         {
-            imgUrl: EvalAsset2,
-            title: locale['eval.module3.card1.title'],
-            desc: locale['eval.module3.card1.desc'],
-            path: 'https://github.com/AI45Lab/CredID',
+            title: 'eval.module1.card.RoboFactory.title',
+            desc: 'eval.module1.card.RoboFactory.desc',
+            types: ['control'],
+            path: 'https://iranqin.github.io/robofactory/',
         },
         {
-            imgUrl: EvalAsset3,
-            title: locale['eval.module3.card2.title'],
-            desc: locale['eval.module3.card2.desc'],
-            path: 'https://github.com/AI45Lab/REEF',
+            title: 'eval.module1.card.CAM.title',
+            desc: 'eval.module1.card.CAM.desc',
+            types: ['control'],
+            path: 'https://zhoues.github.io/Code-as-Monitor/',
         },
         {
-            imgUrl: EvalAsset4,
-            title: locale['eval.module3.card3.title'],
-            desc: locale['eval.module3.card3.desc'],
-            path: 'https://github.com/AI45Lab/AIGC_detection',
+            title: 'eval.module1.card.RH20T-P.title',
+            desc: 'eval.module1.card.RH20T-P.desc',
+            types: ['control'],
+            path: 'https://sites.google.com/view/rh20t-primitive/main',
+        },
+        {
+            title: 'eval.module1.card.UGP.title',
+            desc: 'eval.module1.card.UGP.desc',
+            types: ['control'],
+            path: '',
+        },
+        {
+            title: 'eval.module1.card.CDP.title',
+            desc: 'eval.module1.card.CDP.desc',
+            types: ['control'],
+            path: '',
+        },
+        {
+            title: 'eval.module1.card.ReSo.title',
+            desc: 'eval.module1.card.ReSo.desc',
+            types: ['control'],
+            path: 'https://arxiv.org/pdf/2503.02390',
+        },
+
+        // 机器人导航
+        {
+            title: 'eval.module1.card.NavigateDiff.title',
+            desc: 'eval.module1.card.NavigateDiff.desc',
+            types: ['navigation'],
+            path: 'https://21styouth.github.io/NavigateDiff/',
+        },
+        {
+            title: 'eval.module1.card.MP5.title',
+            desc: 'eval.module1.card.MP5.desc',
+            types: ['navigation'],
+            path: 'https://iranqin.github.io/MP5.github.io/',
+        },
+
+        // 世界模型
+        {
+            title: 'eval.module1.card.WorldSimBench.title',
+            desc: 'eval.module1.card.WorldSimBench.desc',
+            types: ['worldModel'],
+            path: 'https://arxiv.org/pdf/2410.18072',
+        },
+        {
+            title: 'eval.module1.card.MineDreamer.title',
+            desc: 'eval.module1.card.MineDreamer.desc',
+            types: ['worldModel'],
+            path: 'https://sites.google.com/view/minedreamer/main',
+        },
+        {
+            title: 'eval.module1.card.GameFactory.title',
+            desc: 'eval.module1.card.GameFactory.desc',
+            types: ['worldModel'],
+            path: 'https://yujiwen.github.io/gamefactory/',
+        },
+
+        // 可信具身
+        {
+            title: 'eval.module1.card.SafeDiff.title',
+            desc: 'eval.module1.card.SafeDiff.desc',
+            types: ['trustworthy'],
+            path: 'https://arxiv.org/pdf/2412.10349',
         },
     ];
 
-    const module4CardList = [
-        {
-            title: locale['eval.module4.card1.title'],
-            desc: locale['eval.module4.card1.desc'],
-            github: 'https://github.com/AI45Lab/CodeAttack',
-            path: 'https://renqibing.github.io/CodeAttackWeb/',
-        },
-        {
-            title: locale['eval.module4.card2.title'],
-            desc: locale['eval.module4.card2.desc'],
-            github: 'https://github.com/AI45Lab/ActorAttack',
-            path: 'https://huggingface.co/datasets/SafeMTData/SafeMTData',
-        },
-    ];
+    // const tabs = ['all', 'tool', 'data'];
+    const tabs = ['all', 'control', 'navigation', 'worldModel', 'trustworthy'];
+    const [currentTab, setCurrentTab] = useState('all');
+    const [tabList, setTabList] = useState(module1CardList);
+
+
+    const handleTabChange = (tab: string) => {
+        setCurrentTab(tab);
+        if (tab === 'all') {
+            setTabList(module1CardList);
+        } else {
+            setTabList(module1CardList.filter((item) => item.types?.includes(tab)));
+        }
+    };
+
 
     return (
         <div className={styles.eval}>
@@ -64,45 +129,30 @@ const Eval = () => {
             />
             <div className="container">
                 <Panel
-                    title={locale['eval.module1.titleNew']}
+                    title={locale['eval.titleNew']}
                 >
-                    <div className={styles.inner}>
-                        <img src={lang === 'en-US' ? EvalAsset1En : EvalAsset1} alt="eval-asset-1" />
-                    </div>
-                </Panel>
-                <Panel
-                    title={locale['eval.module2.titleNew']}
-                >
-                    <SliderModule />
-                </Panel>
-                <Panel
-                    title={locale['eval.module3.titleNew']}
-                >
-                    <div className={styles.cardList}>
+                    <div className={styles.tabs}>
                         {
-                            module3CardList.map((item) => (
-                                <CommonCard
-                                    type="eval"
-                                    hoverBg={EvalCardHoverBg1}
-                                    {...item}
-                                    key={`tech-module1-card-${item.title}`}
-                                    height="550px"
-                                />
+                            tabs.map((item) => (
+                                <div
+                                    className={classNames(styles.tabsItem, {
+                                        [styles.active]: currentTab === item,
+                                    })}
+                                    key={item}
+                                    onClick={() => handleTabChange(item)}
+                                >
+                                    {locale[typeMap[item]]}
+                                </div>
                             ))
                         }
                     </div>
-                </Panel>
-                <Panel
-                    title={locale['eval.module4.titleNew']}
-                    desc={locale['eval.module4.desc']}
-                >
                     <div className={styles.cardList}>
                         {
-                            module4CardList.map((item) => (
-                                <EvalSmallCard
-                                    key={`eval-module4-${item.title}`}
-                                    hoverBg={EvalCardHoverBg2}
+                            tabList.map((item) => (
+                                <TabCard
                                     {...item}
+                                    key={`eval-module1-${item.title}`}
+                                    hoverBg={ServiceM1HoverBg}
                                 />
                             ))
                         }

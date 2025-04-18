@@ -61,5 +61,13 @@
                 cursor: pointer;
             }
         }
+
+        img {
+            width: 100%;        // 固定宽度
+            height: 100%;       // 固定高度
+            object-fit: cover;   // 图片铺满盒子，多余裁剪
+            border-radius: 8px;  // （可选）让图片也圆角
+            display: block;
+          }
     }
 }

@@ -3,11 +3,18 @@ import { useContext } from 'react';
 import Banner from '@/components/banner';
 import Panel from '@/components/panel';
 import { InfoContext } from '@/provider/global-provider';
-import CommonCard from '@/components/card';
+// import CommonCard from '@/components/card';
+import CommonCard from '@/components/cardbase';
 import BaseBannerPic from '@/assets/pics/base-banner.jpg';
-import BaseCardAsset1 from '@/assets/pics/base-card-asset-1.jpg';
-import BaseCardAsset2 from '@/assets/pics/base-card-asset-2.jpg';
-import BaseCardAsset3 from '@/assets/pics/base-card-asset-3.jpg';
+// import BaseCardAsset1 from '@/assets/pics/base-card-asset-1.jpg';
+// import BaseCardAsset2 from '@/assets/pics/base-card-asset-2.jpg';
+// import BaseCardAsset3 from '@/assets/pics/base-card-asset-3.jpg';
+import BaseCardAsset11 from '@/assets/picsNew/base-card-asset-1-1.png';
+import BaseCardAsset12 from '@/assets/picsNew/base-card-asset-1-2.png';
+import BaseCardAsset21 from '@/assets/picsNew/base-card-asset-2-1.png';
+import BaseCardAsset22 from '@/assets/picsNew/base-card-asset-2-2.png';
+import BaseCardAsset31 from '@/assets/picsNew/base-card-asset-3-1.png';
+import BaseCardAsset32 from '@/assets/picsNew/base-card-asset-3-2.png';
 import CardHoverBg from '@/assets/pics/base-card-hover-bg.jpg';
 
 const Content = () => {
@@ -15,22 +22,46 @@ const Content = () => {
 
     const cardList = [
         {
-            imgUrl: BaseCardAsset1,
-            title: locale['base.module1.card1.title'],
-            desc: locale['base.module1.card1.desc'],
+            imgUrl: BaseCardAsset11,
+            title: locale['base.module1.card1.titleNew'],
+            desc: locale['base.module1.card1.descNew'],
             path: 'https://github.com/AI45Lab/CELLO',
         },
         {
-            imgUrl: BaseCardAsset2,
-            title: locale['base.module1.card2.title'],
-            desc: locale['base.module1.card2.desc'],
+            imgUrl: BaseCardAsset12,
+            title: locale['base.module1.card2.titleNew'],
+            desc: locale['base.module1.card2.descNew'],
             path: 'https://github.com/OpenCausaLab/MORE',
         },
+    ];
+
+    const cardList2 = [
         {
-            imgUrl: BaseCardAsset3,
-            title: locale['base.module1.card3.title'],
-            desc: locale['base.module1.card3.desc'],
-            path: 'https://github.com/AI45Lab/SelfConsciousness',
+            imgUrl: BaseCardAsset21,
+            title: locale['base.module2.card1.titleNew'],
+            desc: locale['base.module2.card1.descNew'],
+            path: 'https://github.com/AI45Lab/CELLO',
+        },
+        {
+            imgUrl: BaseCardAsset22,
+            title: locale['base.module2.card2.titleNew'],
+            desc: locale['base.module2.card2.descNew'],
+            path: 'https://github.com/OpenCausaLab/MORE',
+        },
+    ];
+
+    const cardList3 = [
+        {
+            imgUrl: BaseCardAsset31,
+            title: locale['base.module3.card1.titleNew'],
+            desc: locale['base.module3.card1.descNew'],
+            path: 'https://github.com/AI45Lab/CELLO',
+        },
+        {
+            imgUrl: BaseCardAsset32,
+            title: locale['base.module3.card2.titleNew'],
+            desc: locale['base.module3.card2.descNew'],
+            path: 'https://github.com/OpenCausaLab/MORE',
         },
     ];
 
@@ -56,7 +87,7 @@ const Content = () => {
                                     {...item}
                                     key={`base-card-${index}`}
                                     hoverBg={CardHoverBg}
-                                    height={lang === 'en-US' ? '600px' : ''}
+                                    height={lang === 'en-US' ? '' : ''}
                                 />
                             ))
                         }
@@ -68,14 +99,14 @@ const Content = () => {
                 >
                     <div className={styles.cardList}>
                         {
-                            cardList.map((item, index) => (
+                            cardList2.map((item, index) => (
                                 // eslint-disable-next-line react/no-array-index-key
                                 <CommonCard
                                     type="base"
                                     {...item}
                                     key={`base-card-${index}`}
                                     hoverBg={CardHoverBg}
-                                    height={lang === 'en-US' ? '600px' : ''}
+                                    height={lang === 'en-US' ? '' : ''}
                                 />
                             ))
                         }
@@ -87,14 +118,14 @@ const Content = () => {
                 >
                     <div className={styles.cardList}>
                         {
-                            cardList.map((item, index) => (
+                            cardList3.map((item, index) => (
                                 // eslint-disable-next-line react/no-array-index-key
                                 <CommonCard
                                     type="base"
                                     {...item}
                                     key={`base-card-${index}`}
                                     hoverBg={CardHoverBg}
-                                    height={lang === 'en-US' ? '600px' : ''}
+                                    height={lang === 'en-US' ? '' : ''}
                                 />
                             ))
                         }

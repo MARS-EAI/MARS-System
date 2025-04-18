@@ -5,22 +5,18 @@ import styles from './home.module.less';
 import Banner from '@/components/banner';
 import Card from './components/card';
 import classNames from 'classnames';
-import HomeBanner from '@/assets/home-banner.png';
+import HomeBanner from '@/assets/home-bannernew.png';
 import Panel from '@/components/panel';
-import Block1Pic from '@/assets/pics/home-block1-img.png';
-import Block1PicEn from '@/assets/pics/home-block1-img-en.png';
-import Block2Pic from '@/assets/pics/home-block2-img.png';
-import Block2PicEn from '@/assets/pics/home-block2-img-en.png';
-import baseCardPic from '@/assets/pics/safe-base.jpg';
-import techCardPic from '@/assets/pics/safe-tech.jpg';
-import evalCardPic from '@/assets/pics/safe-eval.jpg';
-import platformCardPic from '@/assets/pics/safe-platform.jpg';
-import HomeSlider1 from '@/assets/pics/home-slider-1.jpg';
-// import HomeSlider2 from '@/assets/pics/home-slider-2.jpg';
-import HomeSlider3 from '@/assets/pics/home-slider-3.jpg';
-import HomeSlider4 from '@/assets/pics/home-slider-4.jpg';
-import HomeSlider5 from '@/assets/pics/home-slider-5.jpg';
-import HomeSlider6 from '@/assets/pics/home-slider-6.jpg';
+import Block1Pic from '@/assets/picsNew/home-block1-img.png';
+import Block1PicEn from '@/assets/picsNew/home-block1-img-en.png';
+import Block2Pic from '@/assets/picsNew/home-block2-img.png';
+import Block2PicEn from '@/assets/picsNew/home-block2-img-en.png';
+import baseCardPic from '@/assets/picsNew/safe-base.png';
+import techCardPic from '@/assets/picsNew/safe-tech.png';
+import evalCardPic from '@/assets/picsNew/safe-eval.png';
+import platformCardPic from '@/assets/picsNew/safe-platform.png';
+import HomeSlider1 from '@/assets/picsNew/home-slider-1.jpg';
+import HomeSlider2 from '@/assets/picsNew/home-slider-2.jpg';
 
 const Home = () => {
     const { locale, lang } = useContext(InfoContext);
@@ -28,26 +24,25 @@ const Home = () => {
         {
             imgUrl: baseCardPic,
             title: locale['nav.safeBaseNew'],
-            desc: locale['home.block2.base.desc'],
+            desc: locale['home.block2.base.descNew'],
             path: '/base',
         },
         {
             imgUrl: techCardPic,
             title: locale['nav.safeTechNew'],
-            desc: locale['home.block2.tech.desc'],
+            desc: locale['home.block2.tech.descNew'],
             path: '/tech',
-
         },
         {
             imgUrl: evalCardPic,
             title: locale['nav.safeEvalNew'],
-            desc: locale['home.block2.eval.desc'],
+            desc: locale['home.block2.eval.descNew'],
             path: '/eval',
         },
         {
             imgUrl: platformCardPic,
             title: locale['nav.safeServiceNew'],
-            desc: locale['home.block2.service.desc'],
+            desc: locale['home.block2.service.descNew'],
             path: '/service',
         },
     ];
@@ -55,40 +50,52 @@ const Home = () => {
     const sliders = [
         {
             imgUrl: HomeSlider1,
-            title: locale['home.slider1.title'],
-            desc: locale['home.slider1.desc'],
-            url: 'https://www.shlab.org.cn/news/5443947',
+            title: locale['home.slider1.titleNew'],
+            desc: locale['home.slider1.descNew'],
+            url: 'https://icml-mfm-eai.github.io/',
         },
+        {
+            imgUrl: HomeSlider2,
+            title: locale['home.slider2.titleNew'],
+            desc: locale['home.slider2.descNew'],
+            url: 'https://mas-2025.github.io/MAS-2025/',
+        },
+        // {
+        //     imgUrl: HomeSlider1,
+        //     title: locale['home.slider1.title'],
+        //     desc: locale['home.slider1.desc'],
+        //     url: 'https://www.shlab.org.cn/news/5443947',
+        // },
         // {
         //     imgUrl: HomeSlider2,
         //     title: locale['home.slider2.title'],
         //     desc: locale['home.slider2.desc'],
         //     url: '/base',
         // },
-        {
-            imgUrl: HomeSlider3,
-            title: locale['home.slider3.title'],
-            desc: locale['home.slider3.desc'],
-            url: 'https://mp.weixin.qq.com/s/RttBDbijeFVkFAs4f7pPfQ',
-        },
-        {
-            imgUrl: HomeSlider4,
-            title: locale['home.slider4.title'],
-            desc: locale['home.slider4.desc'],
-            url: '',
-        },
-        {
-            imgUrl: HomeSlider5,
-            title: locale['home.slider5.title'],
-            desc: locale['home.slider5.desc'],
-            url: 'https://www.openeglab.org.cn/#/collaborations-achievements/achievement7',
-        },
-        {
-            imgUrl: HomeSlider6,
-            title: locale['home.slider6.title'],
-            desc: locale['home.slider6.desc'],
-            url: 'https://www.shlab.org.cn/event/detail/59',
-        },
+        // {
+        //     imgUrl: HomeSlider3,
+        //     title: locale['home.slider3.title'],
+        //     desc: locale['home.slider3.desc'],
+        //     url: 'https://mp.weixin.qq.com/s/RttBDbijeFVkFAs4f7pPfQ',
+        // },
+        // {
+        //     imgUrl: HomeSlider4,
+        //     title: locale['home.slider4.title'],
+        //     desc: locale['home.slider4.desc'],
+        //     url: '',
+        // },
+        // {
+        //     imgUrl: HomeSlider5,
+        //     title: locale['home.slider5.title'],
+        //     desc: locale['home.slider5.desc'],
+        //     url: 'https://www.openeglab.org.cn/#/collaborations-achievements/achievement7',
+        // },
+        // {
+        //     imgUrl: HomeSlider6,
+        //     title: locale['home.slider6.title'],
+        //     desc: locale['home.slider6.desc'],
+        //     url: 'https://www.shlab.org.cn/event/detail/59',
+        // },
     ];
 
     const handleClickSlider = (url: string) => {
@@ -100,8 +107,8 @@ const Home = () => {
             <Banner imgUrl={HomeBanner} isHome />
             <div className="container">
                 <Panel
-                    title={locale['home.block1.title']}
-                    desc={locale['home.block1.desc']}
+                    title={locale['home.block1.titleNew']}
+                    desc={locale['home.block1.descNew']}
                 >
                     <div className={classNames(styles.inner, styles.bgWhite1, styles[lang])}>
                         <div className={classNames(styles.innerLeft, styles[lang])}>
@@ -110,21 +117,12 @@ const Home = () => {
                         <div className={styles.innerDivider} />
                         <div className={classNames(styles.innerRight, styles[lang])}>
                             <div className={styles.title}>
-                                {locale['home.block1.inner1.title']}
+                                {locale['home.block1.inner1.titleNew']}
                             </div>
                             <div className={styles.content}>
                                 <p>
-                                    {locale['home.block1.inner1.content.p1']}
+                                    {locale['home.block1.inner1.content.p1New']}
                                 </p>
-                                <p className={styles.mb16}>
-                                    {locale['home.block1.inner1.content.p2']}
-                                </p>
-                                <div className={styles.red}>
-                                    {locale['home.block1.inner1.con.red']}
-                                </div>
-                                <div className={styles.yellow}>
-                                    {locale['home.block1.inner1.con.yellow']}
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,20 +130,20 @@ const Home = () => {
                     <div className={classNames(styles.inner, styles.bgWhite2, styles[lang])}>
                         <div className={classNames(styles.innerLeft, styles.text)}>
                             <div className={styles.title}>
-                                {locale['home.block1.inner2.title']}
+                                {locale['home.block1.inner2.titleNew']}
                             </div>
                             <div className={styles.content}>
-                                {locale['home.block1.inner2.content']}
+                                {locale['home.block1.inner2.contentNew']}
                             </div>
                         </div>
                         <div className={styles.innerDivider} />
-                        <div className={styles.innerRight}>
+                        <div className={styles.innerRight2}>
                             <img src={lang === 'en-US' ? Block2PicEn : Block2Pic} alt="home-module1-asset-2" />
                         </div>
                     </div>
                 </Panel>
                 <Panel
-                    title={locale['home.block2.title']}
+                    title={locale['home.block2.titleNew']}
                 >
                     <div className={styles.inner}>
                         {
@@ -157,24 +155,24 @@ const Home = () => {
                 </Panel>
 
                 <Panel
-                    title={locale['home.block3.title']}
+                    title={locale['home.block3.titleNew']}
                 >
                     <div className={classNames(styles.inner, styles.column, styles.bgWhite, styles.open)}>
                         <div className={styles.line}>
                             <div className={styles.topic}>
-                                {locale['home.block3.data']}
+                                {locale['home.block3.dataNew']}
                             </div>
                             <div className={styles.data}>
                                 <div className={styles.dataItem}>
-                                    <p className={classNames(styles.num, styles.gradientText)}>36,000+</p>
+                                    <p className={classNames(styles.num, styles.gradientText)}> ∞ +</p>
                                     <p className={styles.text}>
-                                        {locale['home.block3.data.text']}
+                                        {locale['home.block3.data.textNew']}
                                     </p>
                                 </div>
                                 <div className={styles.dataItem}>
-                                    <p className={classNames(styles.num, styles.gradientText)}>9,500+</p>
+                                    <p className={classNames(styles.num, styles.gradientText)}> ∞ +</p>
                                     <p className={styles.text}>
-                                        {locale['home.block3.data.img']}
+                                        {locale['home.block3.data.imgNew']}
                                     </p>
                                 </div>
                             </div>
@@ -186,19 +184,19 @@ const Home = () => {
                                 lang === 'en-US' ? styles.en : '',
                             )}
                             >
-                                {locale['home.block3.tool']}
+                                {locale['home.block3.toolNew']}
                             </div>
                             <div className={styles.desc}>
                                 <div className={classNames(styles.descItem, lang === 'en-US' ? styles.en : '')}>
                                     {
                                         lang === 'zh-CN' ? (
                                             <p className={classNames(styles.text, styles.gradientText)}>
-                                                安全风险<br />评估工具
+                                                机器人操控
                                             </p>
                                         ) :
                                             (
                                                 <p className={classNames(styles.text, styles.gradientText, styles.en)}>
-                                                    Evaluation Tools for <br />Safety Risks
+                                                    Robot Manipulation
                                                 </p>
                                             )
                                     }
@@ -210,12 +208,12 @@ const Home = () => {
                                     {
                                         lang === 'zh-CN' ? (
                                             <p className={classNames(styles.text, styles.gradientText)}>
-                                                模型对齐<br />框架方法
+                                                机器人导航
                                             </p>
                                         ) :
                                             (
                                                 <p className={classNames(styles.text, styles.gradientText, styles.en)}>
-                                                    Framework Method for<br />Model Alignment
+                                                    Robot Navigation
                                                 </p>
                                             )
                                     }
@@ -227,12 +225,12 @@ const Home = () => {
                                     {
                                         lang === 'zh-CN' ? (
                                             <p className={classNames(styles.text, styles.gradientText)}>
-                                                可信溯源<br />解决方案
+                                                具身规划
                                             </p>
                                         ) :
                                             (
                                                 <p className={classNames(styles.text, styles.gradientText, styles.en)}>
-                                                    Solutions for Trustworthy <br />Traceability
+                                                    Embodied Planning
                                                 </p>
                                             )
                                     }

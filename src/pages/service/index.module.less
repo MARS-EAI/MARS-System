@@ -102,4 +102,76 @@
             }
         }
     }
+
+    .newsItem {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      
+      .newsImage {
+        width: 300px;
+        height: auto;
+        border-radius: 8px;
+      }
+      
+      .newsContent {
+        flex: 1;
+      }
+      
+      .newsTitle {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .newsSubtitle {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      
+      .moreButton {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #0056b3;
+        color: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        
+      }
+      
+      .moreButton:hover {
+        background-color: #003d80;
+      }
+
+      .academicPartnersGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 24px;
+        justify-items: center;
+        align-items: center;
+        padding: 20px 0;
+      }
+      
+      .logoItem img {
+        width: 100px;
+        height: auto;
+        transition: transform 0.3s;
+      }
+      
+      .logoItem img:hover {
+        transform: scale(1.1);
+      }
+
+      .comingSoon {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 18px;
+        color: #999;
+        font-style: italic;
+      }
+      
+      
 }
