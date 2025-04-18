@@ -8,4 +8,4 @@ export default {
   [propName: string]: any;
 };
 
-export const DEFAULT_LANG = "zh-CN";
+export const DEFAULT_LANG = "en-US";
