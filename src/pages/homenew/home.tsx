@@ -186,7 +186,8 @@ const Home = () => {
                             >
                                 {locale['home.block3.toolNew']}
                             </div>
-                            <div className={styles.desc}>
+                            {/* <div className={styles.desc}> */}
+                            <div className={classNames(styles.desc, lang === 'en-US' ? styles.en : '')}>
                                 <div className={classNames(styles.descItem, lang === 'en-US' ? styles.en : '')}>
                                     {
                                         lang === 'zh-CN' ? (

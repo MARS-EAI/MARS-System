@@ -278,9 +278,9 @@ export const EN = {
     'home.block2.service.descNew': 'Our team is composed of PhDs, professors, and full-time researchers from leading universities and research institutions around the world. We bring together deep academic expertise and practical experience across key areas including robotics, computer vision, and large language models, aiming to advance the frontier of embodied intelligence.',
     'home.block3.titleNew': 'Open Source',
     'home.block3.dataNew': 'Automated data production',
-    'home.block3.data.textNew': 'Observe',
+    'home.block3.data.textNew': 'Observation',
     'home.block3.data.imgNew': 'Trajectory',
-    'home.block3.toolNew': 'Robot Manipulation',
+    'home.block3.toolNew': 'Comprehensive simulation platform',
     'home.slider1.titleNew': 'ICML 2024 MFM-EAI Workshop',
     // eslint-disable-next-line max-len
     'home.slider1.descNew': 'This workshop focuses on bridging large-scale multi-modal foundation models with embodied intelligence. We explore how vision-language models and LLMs can empower embodied agents to perceive, reason, and act in complex real-world environments, enabling more generalizable and interactive AI systems. ',
